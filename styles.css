@@ -936,6 +936,12 @@ footer{
     .about-intro h2.section-title{
         text-align:center
     }
+    .music-toggle{
+        bottom:calc(16px + env(safe-area-inset-bottom, 0px));
+        right:calc(16px + env(safe-area-inset-right, 0px));
+        width:48px;
+        height:48px
+    }
 }
 @media (max-width:900px){
     .about-wrap{
@@ -999,8 +1005,8 @@ audio{
 }
 .music-toggle{
     position:fixed;
-    bottom:24px;
-    right:24px;
+    bottom:calc(24px + env(safe-area-inset-bottom, 0px));
+    right:calc(24px + env(safe-area-inset-right, 0px));
     z-index:200;
     width:52px;
     height:52px;
