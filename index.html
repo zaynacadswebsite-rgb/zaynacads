@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Zayn Acads | Academic Research &amp; Writing Services</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" href="hero-bg.webp" as="image">
+</head>
+<body>
+
+<header class="fade-in-load">
+  <div class="logo">
+    <img src="logo.webp" alt="Zayn Acads logo" class="logo-img" width="45" height="45">
+    ZAYN ACADS
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="siteNav">
+    <ul>
+      <li><button class="nav-btn active" data-page="home">Home</button></li>
+      <li><button class="nav-btn" data-page="about">About Me</button></li>
+      <li><button class="nav-btn" data-page="projects">Sample Works</button></li>
+      <li><button class="nav-btn" data-page="contact">Contact Me</button></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="hero">
+    
+    <div class="hero-content">
+      <h1 class="fade-in-load" style="animation-delay:0.15s">Hi, I'm Zayn</h1>
+      <p class="fade-in-load" style="animation-delay:0.3s">Academic research consultant helping Filipino students with <strong>thesis writing, statistical analysis, and defense preparation.</strong></p>
+      <button class="btn-pill fade-in-load" style="animation-delay:0.45s" onclick="goTo('about')">Learn more about me</button>
+      <a href="#home-highlights" class="scroll-arrow fade-in-load" aria-label="Scroll down"><span class="scroll-tri"></span></a>
+    </div>
+  </div>
+
+  <!-- WHAT I DO -->
+  <div id="home-highlights" class="home-section">
+    <h2 class="section-title reveal">What I Do</h2>
+    <div class="highlight-grid">
+      <div class="highlight-card reveal tilt-card">
+        <div class="highlight-icon">📝</div>
+        <h3>Research Writing &amp; Consulting</h3>
+        <p>Guidance on structuring your Chapters 1–5, refining your research problem, and writing in clear academic English.</p>
+      </div>
+      <div class="highlight-card reveal tilt-card">
+        <div class="highlight-icon">📊</div>
+        <h3>Statistical Analysis</h3>
+        <p>Data encoding, SPSS/Jamovi analysis, and interpretation of results for quantitative and mixed-methods studies.</p>
+      </div>
+      <div class="highlight-card reveal tilt-card">
+        <div class="highlight-icon">🎓</div>
+        <h3>Editing &amp; Defense Coaching</h3>
+        <p>Proofreading, formatting to your school's manual, and mock defense sessions to help you present with confidence.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK STATS -->
+  <div class="stats-section">
+    <div class="stat reveal">
+      <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+      <p>Years Helping Researchers</p>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+      <p>Papers Assisted</p>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
+      <p>Fields Covered</p>
+    </div>
+  </div>
+
+  <!-- FEATURED WORK TEASER -->
+  <div class="home-section">
+    <h2 class="section-title reveal">Featured Sample Works</h2>
+    <div class="teaser-grid">
+      <div class="teaser-card reveal tilt-card">
+        <h3>Business &amp; Management</h3>
+        <p>Quantitative studies on customer satisfaction, employee engagement, and SME operations.</p>
+      </div>
+      <div class="teaser-card reveal tilt-card">
+        <h3>Education</h3>
+        <p>Mixed-methods research on teaching strategies, learning outcomes, and classroom practices.</p>
+      </div>
+      <div class="teaser-card reveal tilt-card">
+        <h3>Information Technology</h3>
+        <p>System development and evaluation studies with usability and acceptance testing.</p>
+      </div>
+    </div>
+    <div class="about-cta reveal">
+      <button class="btn-triangle" onclick="goTo('projects')"><span>View All Sample Works</span><i class="tri-arrow"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page">
+  <div class="about-wrap">
+    <div class="about-text reveal">
+      <div class="about-header">
+        <div class="profile-pic">
+          <img src="profile.webp" alt="Zayn — Academic Research Consultant" onerror="this.style.display='none'; this.parentElement.classList.add('no-img')">
+          <span class="profile-pic-fallback">ZA</span>
+        </div>
+        <div class="about-intro">
+          <h2 class="section-title" style="text-align:left">About Me</h2>
+          <p>I'm an academic research consultant based in the Philippines, working with senior high school, college, and graduate students on thesis and research paper requirements. I help clients strengthen their research design, run and interpret statistical analysis, and polish their papers for submission and oral defense — using clear methodology and honest, collaborative guidance every step of the way.</p>
+        </div>
+      </div>
+
+      <div class="about-info">
+        <h3>Areas of Focus</h3>
+        <ul>
+          <li><span class="role">Quantitative &amp; Qualitative Research</span> <span class="sub">Chapters 1–5, full manuscript support</span></li>
+          <li><span class="role">Statistical Analysis</span> <span class="sub">SPSS, Jamovi, Excel data processing</span></li>
+          <li><span class="role">Editing &amp; Formatting</span> <span class="sub">APA/school-specific manuals, grammar, citations</span></li>
+        </ul>
+
+        <h3>Who I Work With</h3>
+        <ul>
+          <li><span class="role">Senior High School &amp; College Undergraduates</span> <span class="sub">Research subjects, capstone projects</span></li>
+          <li><span class="role">Graduate Students</span> <span class="sub">Master's &amp; doctoral thesis/dissertation support</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h2 class="section-title">Services &amp; Tools</h2>
+      <div class="skills-card">
+        <div class="skills-tabs">
+          <button class="skill-tab active" data-tab="writing">Research Writing</button>
+          <button class="skill-tab" data-tab="stats">Statistical Analysis</button>
+          <button class="skill-tab" data-tab="support">Editing &amp; Support</button>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-cta reveal">
+    <a href="#contact" class="btn-outline" onclick="goTo('contact', event)">Work With Me 🚀</a>
+  </div>
+</section>
+
+<!-- SAMPLE WORKS -->
+<section id="projects" class="page">
+  <div class="projects-section">
+    <h2 class="reveal">Sample Works</h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal tilt-card">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1c2438,#141a2b); display:flex; align-items:center; justify-content:center; color:#b7c0cd; font-size:0.85rem; text-align:center; padding:10px;">Quantitative Study<br>Business Administration</div>
+        <div class="project-body">
+          <h3>Customer Satisfaction &amp; Service Quality</h3>
+          <p>Supported a quantitative undergraduate thesis examining the relationship between service quality dimensions and customer satisfaction in local SMEs, including survey design, SPSS analysis, and results interpretation.</p>
+        </div>
+        <div class="tech-stack-box">
+          <h4>Tools Used</h4>
+          <div class="tech-icons">
+            <span style="background:#2c3e50;">SPSS</span>
+            <span style="background:#0ea5e9;">Excel</span>
+            <span style="background:#495057;">APA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal tilt-card">
+        <div class="project-thumb" style="background:#0d1117; display:flex; align-items:center; justify-content:center; color:#5be49b; font-family:monospace; font-size:0.9rem; text-align:center; padding:10px;">Mixed-Methods Study<br>Education</div>
+        <div class="project-body">
+          <h3>Teaching Strategies &amp; Learning Outcomes</h3>
+          <p>Assisted a graduate thesis combining teacher surveys and classroom observation to evaluate the effect of differentiated instruction on student performance, from methodology design through defense preparation.</p>
+        </div>
+        <div class="tech-stack-box">
+          <h4>Tools Used</h4>
+          <div class="tech-icons">
+            <span style="background:#3178c6;">Jamovi</span>
+            <span style="background:#111827;">Rubrics</span>
+            <span style="background:#495057;">APA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal tilt-card">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#3a2a1a,#1a1410); display:flex; align-items:center; justify-content:center; color:#e08a2c; font-size:0.85rem; text-align:center; padding:10px;">System Study<br>Information Technology</div>
+        <div class="project-body">
+          <h3>System Usability &amp; Acceptance Testing</h3>
+          <p>Guided an IT capstone group through survey-based usability testing and statistical evaluation of a proposed information system, including chapter write-up and results presentation for panel review.</p>
+        </div>
+        <div class="tech-stack-box">
+          <h4>Tools Used</h4>
+          <div class="tech-icons">
+            <span style="background:#2c3e50;">SPSS</span>
+            <span style="background:#c53030;">ISO 25010</span>
+            <span style="background:#495057;">APA</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page">
+  <div class="contact-section">
+    <h2 class="reveal">Contact Zayn Acads</h2>
+    <div class="social-row reveal">
+      <a href="#" title="TikTok" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+          <path d="M16.6 5.82c-.9-.98-1.4-2.26-1.4-3.62h-3.24v13.44c0 1.63-1.33 2.96-2.96 2.96a2.96 2.96 0 0 1 0-5.92c.31 0 .6.05.88.13V9.56a6.2 6.2 0 0 0-.88-.06A6.2 6.2 0 0 0 3 15.7a6.2 6.2 0 0 0 6.2 6.2 6.2 6.2 0 0 0 6.2-6.2V8.62a8.16 8.16 0 0 0 4.6 1.42V6.8a4.85 4.85 0 0 1-3.4-.98z"/>
+        </svg>
+      </a>
+      <a href="mailto:hello@zaynacads.com" title="Email" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="M3.5 6.5 12 13l8.5-6.5"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="contact-grid">
+      <div class="reveal">
+        <h3>Send a Message</h3>
+        <form class="contact-form" action="https://formspree.io/f/mvzebdkv" method="POST" onsubmit="return handleSubmit(event)">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your research (level, field, and what you need help with)..." required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Zayn Acads. All rights reserved.
+</footer>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" src="bg-music.mp3" loop preload="none"></audio>
+<button id="musicToggle" class="music-toggle" aria-label="Toggle music" title="Toggle music">
+  <span class="cd-disc">
+    <span class="cd-hole"></span>
+  </span>
+  <span class="cd-icon">🔇</span>
+  <span class="note note-1">♪</span>
+  <span class="note note-2">♫</span>
+  <span class="note note-3">♪</span>
+</button>
+
+<script src="script.js" defer></script>
+</body>
+</html>
