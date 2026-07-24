@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Zayn Acads | Academic Research &amp; Writing Services</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" href="hero-bg.webp" as="image">
+</head>
+<body>
+
+<header class="fade-in-load">
+  <div class="logo">
+    <img src="logo.webp" alt="Zayn Acads logo" class="logo-img" width="45" height="45">
+    <span translate="no">ZAYN ACADS</span>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="siteNav">
+    <ul>
+      <li><button class="nav-btn active" data-page="home">Home</button></li>
+      <li><button class="nav-btn" data-page="about">About Me</button></li>
+      <li><button class="nav-btn" data-page="projects">Sample Works</button></li>
+      <li><button class="nav-btn" data-page="contact">Contact Me</button></li>
+    </ul>
+  </nav>
+  <div id="google_translate_element" class="translate-widget"></div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="hero">
+    
+    <div class="hero-content">
+      <h1 class="fade-in-load" style="animation-delay:0.15s">Hi, I'm Zayn</h1>
+      <p class="fade-in-load" style="animation-delay:0.3s">an <strong>Academic Research Commissioner</strong> dedicated to helping students with their research and academic writing needs.</p>
+      <button class="btn-pill fade-in-load" style="animation-delay:0.45s" onclick="goTo('about')">Learn more about me</button>
+      <a href="#home-highlights" class="scroll-arrow fade-in-load" aria-label="Scroll down"><span class="scroll-tri"></span></a>
+    </div>
+  </div>
+
+  <!-- WHAT I DO -->
+  <div id="home-highlights" class="home-section">
+    <h2 class="section-title reveal">What I Do</h2>
+    <div class="highlight-grid">
+      <div class="highlight-card reveal tilt-card">
+        <div class="highlight-icon">📝</div>
+        <h3>Research Writing &amp; Consulting</h3>
+        <p>Guidance on structuring your Chapters 1–5, refining your research problem, and writing in clear academic English.</p>
+      </div>
+      <div class="highlight-card reveal tilt-card">
+        <div class="highlight-icon">📊</div>
+        <h3>Statistical Analysis</h3>
+        <p>Data encoding and analysis in mean, median, standard deviation, coefficient of variation, t-test, one-way & two-way ANOVA, regression, Pearson's r, and Chi-square — with clear interpretation of results for quantitative and mixed-methods studies.</p>
+      </div>
+      <div class="highlight-card reveal tilt-card">
+        <div class="highlight-icon">🎓</div>
+        <h3>Editing &amp; Defense Coaching</h3>
+        <p>Proofreading, formatting to your school's manual, and mock defense sessions to help you present with confidence.</p>
+      </div>
+    </div>
+
+    <!-- SERVICE DEMOS -->
+    <div class="demo-row">
+      <!-- AI HUMANIZING DEMO -->
+      <div class="humanize-demo reveal">
+        <div class="humanize-demo-header">
+          <h3 class="humanize-demo-badge">✨ Manual Humanizing</h3>
+          <p class="humanize-demo-title">Watch an AI Flag Get Corrected</p>
+          <p class="humanize-demo-sub">A before-and-after: text flagged by Turnitin, manually humanized, then rechecked.</p>
+        </div>
+        <div class="humanize-stage" id="humanizeStage">
+          <div class="turnitin-panel">
+            <div class="turnitin-panel-header">
+              <span class="turnitin-logo">Turnitin</span>
+              <span class="turnitin-check-label" id="turnitinCheckLabel">Similarity &amp; AI Check</span>
+            </div>
+            <div class="humanize-sample-wrap">
+              <p class="humanize-sample-text" id="humanizeSampleText">In contemporary academic discourse, it is imperative to recognize that the utilization of quantitative methodologies significantly facilitates the comprehensive understanding of multifaceted research phenomena within diverse educational contexts.</p>
+              <div class="humanize-scanline" id="humanizeScanline"></div>
+            </div>
+            <div class="turnitin-score-row">
+              <div class="turnitin-score-circle" id="turnitinScoreCircle">
+                <svg viewBox="0 0 100 100" class="turnitin-score-svg">
+                  <circle cx="50" cy="50" r="42" class="turnitin-score-track"></circle>
+                  <circle cx="50" cy="50" r="42" class="turnitin-score-fill" id="turnitinScoreFill"></circle>
+                </svg>
+                <span class="turnitin-score-number" id="turnitinScoreNumber">90%</span>
+              </div>
+              <div class="turnitin-status-text">
+                <span class="turnitin-status-pill" id="turnitinStatusPill">⚠ Likely AI-Generated</span>
+                <span class="turnitin-status-note" id="turnitinStatusNote">Flagged incorrectly — original human draft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="humanize-steps">
+          <div class="humanize-step active" id="humStep1"><span class="humanize-step-dot">1</span>Detected 90% AI (false flag)</div>
+          <div class="humanize-step" id="humStep2"><span class="humanize-step-dot">2</span>Manual humanizing pass</div>
+          <div class="humanize-step" id="humStep3"><span class="humanize-step-dot">3</span>Rechecked — 0% AI, approved</div>
+        </div>
+      </div>
+
+      <!-- TURNITIN SIMILARITY CHECK DEMO -->
+      <div class="humanize-demo reveal">
+        <div class="humanize-demo-header">
+          <h3 class="humanize-demo-badge">🔍 Turnitin Checking</h3>
+          <p class="humanize-demo-title">Get Your Paper's Similarity &amp; AI Report</p>
+          <p class="humanize-demo-sub">Send your paper and I'll run it through Turnitin so you know your originality score before submission.</p>
+        </div>
+        <div class="humanize-stage" id="scanStage">
+          <div class="scan-doc" id="scanDoc">
+            <div class="scan-doc-header">
+              <span class="scan-doc-icon">📄</span>
+              <span class="scan-doc-name">Thesis_Chapter1-3.docx</span>
+            </div>
+            <div class="scan-doc-lines" id="scanDocLines">
+              <div class="scan-line" style="width:92%"></div>
+              <div class="scan-line" style="width:78%"></div>
+              <div class="scan-line" style="width:88%"></div>
+              <div class="scan-line" style="width:65%"></div>
+              <div class="scan-line" style="width:95%"></div>
+              <div class="scan-line" style="width:72%"></div>
+            </div>
+            <div class="scan-sweep" id="scanSweep"></div>
+          </div>
+          <div class="turnitin-panel">
+            <div class="turnitin-panel-header">
+              <span class="turnitin-logo">Turnitin</span>
+              <span class="turnitin-check-label" id="scanCheckLabel">Waiting to scan…</span>
+            </div>
+            <div class="scan-progress-track">
+              <div class="scan-progress-fill" id="scanProgressFill"></div>
+            </div>
+            <div class="turnitin-score-row">
+              <div class="turnitin-score-circle" id="scanScoreCircle">
+                <svg viewBox="0 0 100 100" class="turnitin-score-svg">
+                  <circle cx="50" cy="50" r="42" class="turnitin-score-track"></circle>
+                  <circle cx="50" cy="50" r="42" class="turnitin-score-fill" id="scanScoreFill"></circle>
+                </svg>
+                <span class="turnitin-score-number" id="scanScoreNumber">--</span>
+              </div>
+              <div class="turnitin-status-text">
+                <span class="turnitin-status-pill" id="scanStatusPill">Ready to check</span>
+                <span class="turnitin-status-note" id="scanStatusNote">Report sent straight to you after scanning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="humanize-steps">
+          <div class="humanize-step active" id="scanStep1"><span class="humanize-step-dot">1</span>You send your paper</div>
+          <div class="humanize-step" id="scanStep2"><span class="humanize-step-dot">2</span>Scanned through Turnitin</div>
+          <div class="humanize-step" id="scanStep3"><span class="humanize-step-dot">3</span>Full report shared with you</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK STATS -->
+  <div class="stats-section">
+    <div class="stat reveal">
+      <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+      <p>Years Helping Researchers</p>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-number" data-target="150">0</span><span class="stat-suffix">+</span>
+      <p>Papers Assisted</p>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
+      <p>Fields Covered</p>
+    </div>
+  </div>
+
+  <!-- CLIENT PROOF CAROUSEL -->
+  <div class="home-section">
+    <h2 class="section-title reveal">Trusted by Clients Like You</h2>
+    <div class="proof-carousel reveal">
+      <div class="proof-track" id="proofTrack">
+        <div class="proof-card">
+          <div class="proof-card-image">
+            <img src="proof-images/proof1.jpg" alt="Client proof" class="proof-card-img" onerror="this.parentElement.style.display='none';">
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-card-image">
+            <img src="proof-images/proof2.jpg" alt="Client proof" class="proof-card-img" onerror="this.parentElement.style.display='none';">
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-card-image">
+            <img src="proof-images/proof3.jpg" alt="Client proof" class="proof-card-img" onerror="this.parentElement.style.display='none';">
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-card-image">
+            <img src="proof-images/proof4.jpg" alt="Client proof" class="proof-card-img" onerror="this.parentElement.style.display='none';">
+          </div>
+        </div>
+        <div class="proof-card" aria-hidden="true">
+          <div class="proof-card-image">
+            <img src="proof-images/proof1.jpg" alt="Client proof" class="proof-card-img" onerror="this.parentElement.style.display='none';">
+          </div>
+        </div>
+        <div class="proof-card" aria-hidden="true">
+          <div class="proof-card-image">
+            <img src="proof-images/proof2.jpg" alt="Client proof" class="proof-card-img" onerror="this.parentElement.style.display='none';">
+          </div>
+        </div>
+        <div class="proof-card" aria-hidden="true">
+          <div class="proof-card-image">
+            <img src="proof-images/proof3.jpg" alt="Client proof" class="proof-card-img" onerror="this.parentElement.style.display='none';">
+          </div>
+        </div>
+        <div class="proof-card" aria-hidden="true">
+          <div class="proof-card-image">
+            <img src="proof-images/proof4.jpg" alt="Client proof" class="proof-card-img" onerror="this.parentElement.style.display='none';">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page">
+  <div class="about-wrap invisible-card">
+    <div class="about-text reveal">
+      <div class="about-header">
+        <div class="profile-pic">
+          <img src="profile.webp" alt="Zayn — Academic Research Consultant" onerror="this.style.display='none'; this.parentElement.classList.add('no-img')">
+          <span class="profile-pic-fallback">ZA</span>
+        </div>
+        <div class="about-intro">
+          <h2 class="section-title" style="text-align:left">About Me</h2>
+          <p>I provide reliable assistance with research Chapters 1–5, Review of Related Literature (RRL), Review of Related Studies (RRS), data analysis, editing, proofreading, APA 7th edition formatting, and manual AI humanizing. I strive to deliver quality work, ensure confidentiality, and meet deadlines to make every research project as smooth and stress-free as possible.</p>
+        </div>
+      </div>
+
+      <div class="about-info">
+        <h3>Areas of Focus</h3>
+        <div class="focus-card">
+          <div class="focus-badges">
+            <span class="focus-badge">Research 1</span>
+            <span class="focus-badge">Thesis</span>
+            <span class="focus-badge">Master's Thesis</span>
+          </div>
+          <ul>
+            <li><span class="role">Quantitative &amp; Qualitative Research</span> <span class="sub">Chapters 1–5, RRL &amp; RRS, full manuscript support</span></li>
+            <li><span class="role">Data Analysis &amp; Interpretation</span> <span class="sub">Mean, median, standard deviation, coefficient of variation, t-test, one-way & two-way ANOVA, regression, Pearson's r, and Chi-square, Excel data processing</span></li>
+            <li><span class="role">Editing, Proofreading &amp; APA 7 Formatting</span> <span class="sub">Grammar, citations, school-specific manuals</span></li>
+            <li><span class="role">Manual AI Humanizing</span> <span class="sub">Refines AI-assisted text so it reads naturally, meaning preserved</span></li>
+            <li><span class="role">Turnitin AI Check Assistance</span> <span class="sub">Similarity &amp; AI originality reports before submission</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h2 class="section-title">Services &amp; Tools</h2>
+      <div class="skills-card">
+        <div class="skills-tabs">
+          <button class="skill-tab active" data-tab="writing">Research Writing</button>
+          <button class="skill-tab" data-tab="stats">Statistical Analysis</button>
+          <button class="skill-tab" data-tab="support">Editing &amp; Support</button>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+
+      <div class="terms-card terms-card-red">
+        <h3>Service Terms</h3>
+        <p>As your academic commissioner, I provide customized academic assistance based on your given instructions. Every commissioned work is prepared with originality in mind, and a Turnitin Similarity Report will be provided as proof of its integrity. Clients are expected to submit complete and accurate project details before work begins. All communications and project information will remain strictly confidential, and the commissioned output is intended solely for academic reference, learning, and research purposes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment-terms-card payment-terms-card-red reveal">
+    <h3>Payment Terms</h3>
+    <p>Regarding the payment, I will provide proof that your paper has already been completed. The proof may be posted on my TikTok content or My Day, but if you prefer to keep it private, I can send it directly to your email instead. The proof will only show a partial preview of the paper—not the complete copy. The full document will be delivered immediately after the payment has been received.</p>
+  </div>
+
+  <div class="about-cta reveal">
+    <a href="#contact" class="btn-outline" onclick="goTo('contact', event)">Work With Me 🚀</a>
+  </div>
+</section>
+
+<!-- SAMPLE WORKS -->
+<section id="projects" class="page">
+  <div class="projects-section">
+    <h2 class="reveal">Sample Works</h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal tilt-card">
+        <img src="sample-business-thesis.jpg" alt="Customer Satisfaction &amp; Service Quality thesis" class="project-thumb project-image-box">
+        <div class="project-body">
+          <h3>Humanize &amp; Turnitin Check</h3>
+        </div>
+        <div class="tech-stack-box">
+          <h4>Tools Used</h4>
+          <div class="tech-icons">
+            <span style="background:#2c3e50;" title="Turnitin"><img src="icon-turnitin.png" alt="Turnitin" class="tool-icon-img"></span>
+            <span style="background:#0ea5e9;" title="Word"><img src="icon-word.png" alt="Word" class="tool-icon-img"></span>
+            <span style="background:#495057;" title="WPS"><img src="icon-wps.png" alt="WPS" class="tool-icon-img"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal tilt-card">
+        <img src="sample-education-thesis.jpg" alt="Teaching Strategies &amp; Learning Outcomes thesis title page" class="project-thumb project-image-box">
+        <div class="project-body">
+          <h3>Masters Thesis Chapter 1-5</h3>
+        </div>
+        <div class="tech-stack-box">
+          <h4>Tools Used</h4>
+          <div class="tech-icons">
+            <span style="background:#3178c6;" title="Word"><img src="icon-word.png" alt="Word" class="tool-icon-img"></span>
+            <span style="background:#111827;" title="Format"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1.5"/><line x1="7.5" y1="7.5" x2="16.5" y2="7.5"/><line x1="7.5" y1="11" x2="16.5" y2="11"/><line x1="7.5" y1="14.5" x2="13" y2="14.5"/></svg></span>
+            <span style="background:#495057;" title="APA"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 8c-2 1-3 2.5-3 4.5S5 16 7 16"/><path d="M17 8c2 1 3 2.5 3 4.5S19 16 17 16"/><path d="M10 15l2-6 2 6"/><line x1="10.6" y1="13" x2="13.4" y2="13"/></svg></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal tilt-card">
+        <img src="sample-it-thesis.jpg" alt="System Usability &amp; Acceptance Testing thesis" class="project-thumb project-image-box">
+        <div class="project-body">
+          <h3>Similarity Index &amp; Turnitin AI Check</h3>
+        </div>
+        <div class="tech-stack-box">
+          <h4>Tools Used</h4>
+          <div class="tech-icons">
+            <span style="background:#2c3e50;" title="Turnitin"><img src="icon-turnitin.png" alt="Turnitin" class="tool-icon-img"></span>
+            <span style="background:#c53030;" title="Similarity"><img src="icon-similarity.png" alt="Similarity" class="tool-icon-img"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="contact" class="page">
+  <div class="contact-section">
+    <h2 class="reveal">Contact Zayn Acads</h2>
+    <p class="quick-links-label reveal">Quick Links</p>
+    <div class="social-row reveal">
+      <a href="https://www.tiktok.com/@zaynsoacadscommission" title="TikTok" aria-label="TikTok" target="_blank" rel="noopener" class="social-icon-link">
+        <img src="tiktok-icon.png" alt="TikTok" class="social-icon-img tiktok-icon-img">
+      </a>
+      <a href="mailto:hello@zaynacads.com" title="Email" aria-label="Email" class="social-icon-link">
+        <img src="gmail-icon.png" alt="Gmail" class="social-icon-img">
+      </a>
+    </div>
+
+    <div class="contact-grid">
+      <div class="reveal contact-col-flex">
+        <h3>Follow & Message Me on TikTok</h3>
+        <div class="tiktok-proof">
+          <div class="tiktok-subcard">
+            <div class="tiktok-proof-row">
+              <div class="tiktok-pic-placeholder">
+                <img src="tiktok-profile.png" alt="TikTok Profile Screenshot" class="tiktok-pic-img">
+              </div>
+              <div class="tiktok-qr-col">
+                <div class="tiktok-qr-placeholder">
+                  <img src="tiktok-qr.png" alt="TikTok QR Code" class="tiktok-qr-img">
+                </div>
+              </div>
+            </div>
+            <div class="tiktok-link-wrap">
+              <a href="https://www.tiktok.com/@zaynsoacadscommission" class="tiktok-link" translate="no" target="_blank" rel="noopener">@zaynsoacadscommission</a>
+              <p class="tiktok-scan-note">This is my main messaging platform — message me here for faster replies!</p>
+            </div>
+          </div>
+
+          <div class="payment-subcard">
+            <h3 class="payment-methods-heading">Accepted Payment Methods</h3>
+            <div class="payment-methods-box">
+              <div class="payment-method-item">
+                <img src="payment-icons/gcash.png" alt="GCash" class="payment-method-icon-img">
+                <span class="payment-method-name" translate="no">GCash</span>
+              </div>
+              <div class="payment-method-item">
+                <img src="payment-icons/maya.jpg" alt="Maya" class="payment-method-icon-img">
+                <span class="payment-method-name" translate="no">Maya</span>
+              </div>
+              <div class="payment-method-item">
+                <img src="payment-icons/paypal.png" alt="PayPal" class="payment-method-icon-img">
+                <span class="payment-method-name" translate="no">PayPal</span>
+              </div>
+              <div class="payment-method-item">
+                <img src="payment-icons/wise.png" alt="Wise" class="payment-method-icon-img">
+                <span class="payment-method-name" translate="no">Wise</span>
+              </div>
+              <div class="payment-method-item">
+                <span class="payment-method-icon">🏦</span>
+                <span class="payment-method-name">Bank Transfer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal contact-col-flex">
+        <h3 class="no-tiktok-heading">No TikTok? Send a Direct Message Below</h3>
+        <form class="contact-form" action="https://formspree.io/f/mvzebdkv" method="POST" onsubmit="return handleSubmit(event)">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your research (level, field, and what you need help with)..." required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Zayn Acads. All rights reserved.
+</footer>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" preload="none"></audio>
+<button id="musicToggle" class="music-toggle" aria-label="Toggle music" title="Toggle music">
+  <span class="cd-disc">
+    <span class="cd-hole"></span>
+  </span>
+  <span class="cd-icon">🔇</span>
+  <span class="note note-1">♪</span>
+  <span class="note note-2">♫</span>
+  <span class="note note-3">♪</span>
+</button>
+
+<script src="script.js" defer></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en',
+        autoDisplay: false,
+        gaTrack: false
+      },
+      'google_translate_element'
+    );
+    // Force the page to stay in original English on load,
+    // ignoring any browser-language auto-redirect cookie.
+    document.cookie = 'googtrans=/en/en; path=/';
+
+    // Force the widget's default label to always read
+    // "Choose a Language" instead of Google's auto-localized text
+    // (e.g. "Pumili ng Wika" when the browser/page locale is Filipino).
+    forceTranslateLabel();
+  }
+
+  function forceTranslateLabel() {
+    const applyLabel = () => {
+      const el = document.querySelector('#google_translate_element .goog-te-gadget-simple .goog-te-menu-value span:first-child');
+      if (el && el.textContent.trim() !== 'Choose a Language') {
+        el.textContent = 'Choose a Language';
+      }
+    };
+    // Keep checking since Google re-renders the widget asynchronously
+    // and can overwrite the label after our first fix.
+    const observer = new MutationObserver(applyLabel);
+    const container = document.getElementById('google_translate_element');
+    if (container) {
+      observer.observe(container, { childList: true, subtree: true, characterData: true });
+    }
+    applyLabel();
+    setInterval(applyLabel, 500);
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
