@@ -401,20 +401,25 @@
       </div>
 
       <div class="reveal contact-col-flex">
-        <h3 class="no-tiktok-heading">No TikTok? Send a Direct Message Below</h3>
-        <form class="contact-form" action="https://formspree.io/f/mvzebdkv" method="POST" onsubmit="return handleSubmit(event)">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
+  <h3 class="no-tiktok-heading">No TikTok? Send a Direct Message Below</h3>
+  <form class="contact-form" action="https://splitforms.com/api/submit" method="POST" onsubmit="return handleSubmit(event)">
+    
+    <!-- Required SplitForms fields added here -->
+    <input type="hidden" name="access_key" value="2bf715c6467f4011a50a4075ff251be6">
+    <input type="checkbox" name="botcheck" style="display:none">
 
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell me about your research (level, field, and what you need help with)..." required></textarea>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="name@example.com" required>
 
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Tell me about your research (level, field, and what you need help with)..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
     </div>
   </div>
 </section>
